@@ -5,3 +5,4 @@ theme:
     scheme: slate
     primary: deep purple
     accent: deep purple
+[← Volver al inicio](index.md)
