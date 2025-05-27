@@ -3,15 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <title>{{ page.title }}</title>
+
+    <!-- Estilos personalizados -->
     <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <!-- Font Awesome para íconos opcionales -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <!-- Navbar -->
+
+    <!-- NAVBAR superior -->
     <nav class="topnav">
       <a href="/" class="logo-link">
         <img src="/assets/img/logo.png" alt="Logo" class="logo-img" />
@@ -22,7 +28,7 @@
       <a href="/referencia.md">Referencia API</a>
     </nav>
 
-    <!-- Sidebar -->
+    <!-- SIDEBAR lateral -->
     <aside class="sidebar">
       <details open>
         <summary>📚 Secciones disponibles</summary>
@@ -35,9 +41,11 @@
       </details>
     </aside>
 
-    <!-- Contenido -->
+    <!-- CONTENIDO principal -->
     <main class="content">
       {{ content }}
     </main>
+
   </body>
 </html>
+
