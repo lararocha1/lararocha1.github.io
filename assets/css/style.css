@@ -12,11 +12,12 @@ nav.topnav {
   background-color: #1a1a1a;
   padding: 12px 24px;
   display: flex;
+  align-items: center;
   gap: 24px;
   position: sticky;
   top: 0;
   z-index: 999;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 nav.topnav a {
@@ -29,6 +30,19 @@ nav.topnav a:hover {
   text-decoration: underline;
 }
 
+/* Logo en navbar */
+.logo-link {
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+}
+
+.logo-img {
+  height: 32px;
+  width: auto;
+  margin-right: 8px;
+}
+
 /* Sidebar lateral */
 .sidebar {
   background-color: #121212;
@@ -39,16 +53,43 @@ nav.topnav a:hover {
   border-right: 1px solid #333;
   height: 100vh;
   position: fixed;
-  top: 56px; /* importante si tu navbar tiene altura fija */
+  top: 56px; /* Altura de la navbar */
   left: 0;
   overflow-y: auto;
+}
+
+.sidebar details summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: #b88cff;
+  margin-bottom: 8px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sidebar ul li {
+  margin: 4px 0;
+}
+
+.sidebar a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
 }
 
 /* Contenido principal */
 main.content {
   margin-left: 260px;
-  padding: 24px;
+  padding: 32px;
 }
+
+/* Admonitions */
 .admonition {
   border-left: 5px solid #b88cff;
   background-color: #1e1e1e;
@@ -65,4 +106,24 @@ main.content {
   border-left-color: #ff4444;
 }
 
+/* Tablas tipo técnico */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-family: monospace;
+  font-size: 14px;
+}
 
+th, td {
+  border: 1px solid #333;
+  padding: 8px 12px;
+  text-align: left;
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+th {
+  background-color: #2a2a2a;
+  color: #b88cff;
+}
