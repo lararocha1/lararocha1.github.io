@@ -3,21 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="/assets/css/style.css" />
 
-    <!-- Font Awesome para íconos opcionales -->
+    <!-- Font Awesome para íconos (opcional) -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
 
-    <!-- NAVBAR superior -->
+    <!-- NAVBAR -->
     <nav class="topnav">
       <a href="/" class="logo-link">
         <img src="/assets/img/logo.png" alt="Logo" class="logo-img" />
@@ -28,24 +27,40 @@
       <a href="/referencia.md">Referencia API</a>
     </nav>
 
-    <!-- SIDEBAR lateral -->
+    <!-- SIDEBAR -->
     <aside class="sidebar">
       <details open>
         <summary>📚 Secciones disponibles</summary>
         <ul>
-          <li><a href="/guia.md">Guía de Inicio</a></li>
+          <li><a href="/index.md">Guía de Inicio</a></li>
           <li><a href="/referencia.md">Referencia de la API</a></li>
-          <li><a href="/endpoints/get-market.md">Get Market</a></li>
-          <li><a href="/endpoints/get-orderbook.md">Get Orderbook</a></li>
+
+          <li>
+            <details>
+              <summary>Endpoints</summary>
+              <ul>
+                <li><a href="/endpoints/get-market.md">Get Market</a></li>
+                <li><a href="/endpoints/get-orderbook.md">Get Orderbook</a></li>
+              </ul>
+            </details>
+          </li>
+
+          <li>
+            <details>
+              <summary>Extras</summary>
+              <ul>
+                <li><a href="/playground.md">API Playground</a></li>
+              </ul>
+            </details>
+          </li>
         </ul>
       </details>
     </aside>
 
-    <!-- CONTENIDO principal -->
+    <!-- CONTENIDO -->
     <main class="content">
       {{ content }}
     </main>
 
   </body>
 </html>
-
