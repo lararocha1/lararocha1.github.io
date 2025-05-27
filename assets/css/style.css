@@ -153,21 +153,3 @@ tr:nth-child(even) {
   }
 }
 
-@media screen and (max-width: 1024px) {
-  .sidebar {
-    width: 200px;
-  }
-
-  main.content {
-    margin-left: 220px;
-  }
-}
-/* 🍔 Botón hamburguesa */
-.hamburger {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 24px;
-  color: #b88cff;
-  cursor: pointer;
-}
