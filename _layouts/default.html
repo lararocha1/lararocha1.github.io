@@ -8,7 +8,7 @@
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="/assets/css/style.css" />
 
-    <!-- Font Awesome para íconos (opcional) -->
+    <!-- Íconos opcionales (Font Awesome) -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -16,7 +16,7 @@
   </head>
   <body>
 
-    <!-- NAVBAR -->
+    <!-- BARRA SUPERIOR -->
     <nav class="topnav">
       <a href="/" class="logo-link">
         <img src="/assets/img/logo.png" alt="Logo" class="logo-img" />
@@ -27,20 +27,20 @@
       <a href="/referencia/">Referencia API</a>
     </nav>
 
-    <!-- SIDEBAR -->
+    <!-- BARRA LATERAL -->
     <aside class="sidebar">
       <details open>
         <summary>📚 Secciones disponibles</summary>
         <ul>
           <li><a href="/guia/">Guía de Inicio</a></li>
-          <li><a href="referencia/">Referencia de la API</a></li>
+          <li><a href="/referencia/">Referencia de la API</a></li>
 
           <li>
             <details>
               <summary>Endpoints</summary>
               <ul>
-                <li><a href="/endpoints/get-market.md">Get Market</a></li>
-                <li><a href="/endpoints/get-orderbook.md">Get Orderbook</a></li>
+                <li><a href="/endpoints/get-market/">Get Market</a></li>
+                <li><a href="/endpoints/get-orderbook/">Get Orderbook</a></li>
               </ul>
             </details>
           </li>
@@ -49,7 +49,7 @@
             <details>
               <summary>Extras</summary>
               <ul>
-                <li><a href="/playground.md">API Playground</a></li>
+                <li><a href="/playground/">API Playground</a></li>
               </ul>
             </details>
           </li>
@@ -57,7 +57,7 @@
       </details>
     </aside>
 
-    <!-- CONTENIDO -->
+    <!-- CONTENIDO PRINCIPAL -->
     <main class="content">
       {{ content }}
     </main>
