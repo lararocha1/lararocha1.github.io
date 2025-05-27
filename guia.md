@@ -1,7 +1,3 @@
----
-layout: default
-title: Guía de Inicio
----
 
 [← Volver al inicio](index.md)
 
