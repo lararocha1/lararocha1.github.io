@@ -12,7 +12,7 @@ title: Inicio
 ## 📘 Secciones disponibles
 
 - [Guía de Inicio](guia.md)
-- [Referencia API](/referencia/)
+- [Referencia API](referencia/index.md)
 - [Market Endpoint](endpoints/get-market.md)
 - [Orderbook Endpoint](endpoints/get-orderbook.md)
 
