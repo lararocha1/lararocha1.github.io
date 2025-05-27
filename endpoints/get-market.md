@@ -1,3 +1,12 @@
-/v1/market/instruments?symbol={symbol}&instType={instType}&status={status}&limit={limit}&offset={offset}: 
+# GET /v1/market/orderbook
 
-List available instruments, and it’s properties. (like precision, price collars, etc)
+📌 **Descripción:** Devuelve el snapshot actual del orderbook.
+
+## Parámetros
+
+| Nombre | Tipo   | Descripción         |
+|--------|--------|---------------------|
+| symbol | string | Par de trading, ej. `BTCUSD` |
+
+## Ejemplo de llamada
+
