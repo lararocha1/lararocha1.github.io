@@ -20,3 +20,7 @@ Para comenzar, hacé un `git clone` del repo y corré el archivo `main.py`.
 | -------- | ------ | ----------------- |
 | `/login` | POST   | Login de usuario  |
 | `/users` | GET    | Lista de usuarios |
+
+remote_theme: pages-themes/cayman@v0.2.0
+plugins:
+- jekyll-remote-theme # add this line to the plugins list if you already have one
