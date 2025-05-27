@@ -171,32 +171,3 @@ tr:nth-child(even) {
   color: #b88cff;
   cursor: pointer;
 }
-
-/* Sidebar oculto en mobile y visible si se activa */
-@media screen and (max-width: 768px) {
-  .hamburger {
-    display: block;
-    margin-right: auto;
-  }
-
-  .sidebar {
-    display: none;
-    position: fixed;
-    top: 56px;
-    left: 0;
-    background-color: #121212;
-    width: 220px;
-    height: calc(100% - 56px);
-    z-index: 1000;
-    overflow-y: auto;
-  }
-
-  .sidebar.visible {
-    display: block;
-  }
-
-  main.content {
-    margin-left: 0;
-  }
-}
-
