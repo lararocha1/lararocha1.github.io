@@ -1,9 +1,10 @@
 ---
 layout: default
 title: Inicio
-description: Documentación de la API
 ---
-
+<div class="admonition">
+  💡 <strong>Tip:</strong> Podés probar los endpoints en [Postman](https://www.postman.com/).
+</div>
 # Bienvenida a mi documentación API 🚀
 
 ## 📘 Secciones disponibles
