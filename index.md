@@ -2,7 +2,6 @@
 layout: default
 title: Inicio
 ---
-# lararocha1.github.io
 
 # Bienvenida a mi documentación API 🚀
 ---
