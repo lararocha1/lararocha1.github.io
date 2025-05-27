@@ -14,3 +14,8 @@
 ## Guía de Inicio
 
 Para comenzar, hacé un `git clone` del repo y corré el archivo `main.py`.
+
+| Endpoint | Método | Descripción       |
+| -------- | ------ | ----------------- |
+| `/login` | POST   | Login de usuario  |
+| `/users` | GET    | Lista de usuarios |
