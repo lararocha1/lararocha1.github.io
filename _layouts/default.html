@@ -64,3 +64,36 @@
 
   </body>
 </html>
+<!-- NAVBAR -->
+<nav class="topnav">
+  <button id="toggleSidebar" class="hamburger">
+    <i class="fas fa-bars"></i>
+  </button>
+  <a href="/" class="logo-link">
+    <img src="/assets/img/logo.png" alt="Logo" class="logo-img" />
+  </a>
+  <a href="/">Inicio</a>
+  <a href="/guia/">Guía</a>
+  <a href="/endpoints/">Endpoints</a>
+  <a href="/referencia/">Referencia API</a>
+</nav>
+
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+  <!-- contenido como ya lo tenés -->
+</aside>
+
+<!-- CONTENIDO -->
+<main class="content">
+  {{ content }}
+</main>
+
+<!-- Script para el menú -->
+<script>
+  const toggleBtn = document.getElementById("toggleSidebar");
+  const sidebar = document.getElementById("sidebar");
+
+  toggleBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("visible");
+  });
+</script>
