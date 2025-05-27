@@ -8,6 +8,9 @@
 
 - [Guía de Inicio](#guía-de-inicio)
 - [Referencias de la API](#referencias-de-la-api)
+- Endpoints:
+  - [Get Market](endpoints/get-market.md)
+  - [Get Orderbook](endpoints/get-orderbook.md)
 
 ---
 
