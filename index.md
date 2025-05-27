@@ -33,4 +33,4 @@ Para comenzar, hacé un `git clone` del repo y corré el archivo `main.py`.
 ## Secciones
 
 - [Guía de uso](guia.md)
-- [Referencia de la API](api/introduccion.md)
+- [Referencia de la API](introduccion.md)
