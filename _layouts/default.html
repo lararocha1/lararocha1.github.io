@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
-</head>
-<body>
-  <nav>
-    <a href="/">Inicio</a>
-    <a href="/guia.md">Guía</a>
-    <a href="/endpoints/">Endpoints</a>
-  </nav>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
+  <body>
+    <nav class="topnav">
+      <a href="/" class="logo">Inicio</a>
+      <a href="/guia.md">Guía</a>
+      <a href="/endpoints/">Endpoints</a>
+      <a href="/referencia.md">Referencia API</a>
+    </nav>
 
-  <main>
-    {{ content }}
-  </main>
-</body>
+    <main class="content">
+      {{ content }}
+    </main>
+  </body>
 </html>
