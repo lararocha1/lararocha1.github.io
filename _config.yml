@@ -1,3 +1,19 @@
 title: Documentación API
-theme: jekyll-theme-midnight
 markdown: kramdown
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# GitHub Pages
+baseurl: ""  # Mantenelo vacío si estás en user/organization site
+url: "https://lararocha1.github.io"
+
+# Config opcional (podés borrar si no lo usás)
+show_downloads: false
+
+# Colores (no necesarios si usás CSS personalizado)
+# text_color: "#ffffff"
+# link_color: "#b88cff"
+# hover_color: "#d9b3ff"
