@@ -17,14 +17,17 @@
   <body>
 
     <!-- BARRA SUPERIOR -->
-    <nav class="topnav">
-      <a href="/" class="logo-link">
-        <img src="/assets/img/logo.png" alt="Logo" class="logo-img" />
-      </a>
-      <a href="/">Inicio</a>
-      <a href="/guia/">Guía</a>
-      <a href="/endpoints/">Endpoints</a>
-      <a href="/referencia/">Referencia API</a>
+    <nav class="site-nav">
+      <div class="nav-container">
+        <a href="/" class="nav-logo">API Docs</a>
+        <div class="nav-links">
+          <a href="/">Inicio</a>
+          <a href="/guia">Guía</a>
+          <a href="/endpoints">Endpoints</a>
+          <a href="/referencia">Referencia</a>
+          <a href="/search" class="search-link">🔍 Buscar</a>
+        </div>
+      </div>
     </nav>
 
     <!-- BARRA LATERAL -->
@@ -58,9 +61,136 @@
     </aside>
 
     <!-- CONTENIDO PRINCIPAL -->
-    <main class="content">
+    <main class="site-content">
       {{ content }}
     </main>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
+        <div class="footer-links">
+          <a href="https://github.com/lararocha1">GitHub</a>
+          <a href="https://github.com/lararocha1/lararocha1.github.io/issues">Issues</a>
+        </div>
+      </div>
+    </footer>
+
+    <style>
+      :root {
+        --text-color: {{ site.text_color }};
+        --link-color: {{ site.link_color }};
+        --hover-color: {{ site.hover_color }};
+        --background-color: {{ site.background_color }};
+        --code-background: {{ site.code_background }};
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background: var(--background-color);
+        margin: 0;
+        padding: 0;
+      }
+
+      .site-nav {
+        background: var(--code-background);
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--link-color);
+      }
+
+      .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .nav-logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--text-color);
+        text-decoration: none;
+      }
+
+      .nav-links a {
+        color: var(--text-color);
+        text-decoration: none;
+        margin-left: 1.5rem;
+        transition: color 0.2s;
+      }
+
+      .nav-links a:hover {
+        color: var(--hover-color);
+      }
+
+      .search-link {
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .site-content {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+
+      .site-footer {
+        background: var(--code-background);
+        padding: 2rem 0;
+        margin-top: 4rem;
+        border-top: 1px solid var(--link-color);
+      }
+
+      .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .footer-links a {
+        color: var(--text-color);
+        text-decoration: none;
+        margin-left: 1.5rem;
+      }
+
+      .footer-links a:hover {
+        color: var(--hover-color);
+      }
+
+      @media (max-width: 768px) {
+        .nav-container {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .nav-links {
+          margin-top: 1rem;
+        }
+
+        .nav-links a {
+          margin: 0 0.75rem;
+        }
+
+        .footer-container {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .footer-links {
+          margin-top: 1rem;
+        }
+
+        .footer-links a {
+          margin: 0 0.75rem;
+        }
+      }
+    </style>
 
   </body>
 </html>
