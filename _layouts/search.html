@@ -1,0 +1,128 @@
+---
+layout: default
+---
+
+<div class="search-container">
+  <div class="search-box">
+    <input type="text" id="search-input" placeholder="Buscar en la documentación..." autocomplete="off">
+    <div id="search-results" class="search-results"></div>
+  </div>
+</div>
+
+<script>
+  // Search functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('search-input');
+    const searchResults = document.getElementById('search-results');
+    let searchIndex = [];
+
+    // Fetch search index
+    fetch('/search.json')
+      .then(response => response.json())
+      .then(data => {
+        searchIndex = data;
+      });
+
+    searchInput.addEventListener('input', function() {
+      const query = this.value.toLowerCase();
+      if (query.length < 2) {
+        searchResults.innerHTML = '';
+        return;
+      }
+
+      const results = searchIndex.filter(item => {
+        return item.title.toLowerCase().includes(query) ||
+               item.content.toLowerCase().includes(query);
+      });
+
+      displayResults(results);
+    });
+
+    function displayResults(results) {
+      searchResults.innerHTML = '';
+      
+      if (results.length === 0) {
+        searchResults.innerHTML = '<div class="no-results">No se encontraron resultados</div>';
+        return;
+      }
+
+      const resultsList = document.createElement('ul');
+      results.forEach(result => {
+        const li = document.createElement('li');
+        const link = document.createElement('a');
+        link.href = result.url;
+        link.innerHTML = `<strong>${result.title}</strong><br>${result.excerpt}`;
+        li.appendChild(link);
+        resultsList.appendChild(li);
+      });
+
+      searchResults.appendChild(resultsList);
+    }
+  });
+</script>
+
+<style>
+  .search-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  .search-box {
+    position: relative;
+  }
+
+  #search-input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border: 2px solid var(--link-color);
+    border-radius: 4px;
+    background: var(--code-background);
+    color: var(--text-color);
+  }
+
+  .search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--background-color);
+    border: 1px solid var(--link-color);
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    max-height: 500px;
+    overflow-y: auto;
+    z-index: 1000;
+  }
+
+  .search-results ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .search-results li {
+    padding: 1rem;
+    border-bottom: 1px solid var(--link-color);
+  }
+
+  .search-results li:last-child {
+    border-bottom: none;
+  }
+
+  .search-results a {
+    color: var(--text-color);
+    text-decoration: none;
+  }
+
+  .search-results a:hover {
+    color: var(--hover-color);
+  }
+
+  .no-results {
+    padding: 1rem;
+    text-align: center;
+    color: var(--text-color);
+  }
+</style> 
