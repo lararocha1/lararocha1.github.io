@@ -1,8 +1,10 @@
-[← Volver al inicio](index.md)
 ---
 layout: default
 title: Guía de Inicio
 ---
+
+[← Volver al inicio](index.md)
+
 
 # Guía de Inicio
 
