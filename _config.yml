@@ -1,3 +1,20 @@
 title: Documentación API
-theme: jekyll-theme-midnight
+theme: jekyll-theme-cayman
 markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Build settings
+baseurl: ""
+url: "https://lararocha1.github.io"
+
+# Theme settings
+show_downloads: true
+google_analytics: UA-XXXXXXXXX-X
+
+# Custom settings
+text_color: "#4a4a4a"
+link_color: "#0366d6"
+hover_color: "#0366d6"

@@ -2,35 +2,59 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8">
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    {% seo %}
   </head>
   <body>
-    <!-- Navbar superior -->
-    <nav class="topnav">
-      <a href="/" class="logo">Inicio</a>
-      <a href="/guia.md">Guía</a>
-      <a href="/endpoints/">Endpoints</a>
-      <a href="/referencia.md">Referencia API</a>
-    </nav>
+    <header class="page-header">
+      <h1 class="project-name">{{ page.title }}</h1>
+      <h2 class="project-tagline">{{ site.description }}</h2>
+      {% if site.show_downloads %}
+        <a href="{{ site.github.repository_url }}" class="btn">Ver en GitHub</a>
+      {% endif %}
+    </header>
 
-    <!-- Sidebar lateral con menú desplegable -->
-    <aside class="sidebar">
-      <details open>
-        <summary>📚 Secciones disponibles</summary>
-        <ul>
-          <li><a href="/guia.md">Guía de Inicio</a></li>
-          <li><a href="/referencia.md">Referencia de la API</a></li>
-          <li><a href="/endpoints/get-market.md">Get Market</a></li>
-          <li><a href="/endpoints/get-orderbook.md">Get Orderbook</a></li>
-        </ul>
-      </details>
-    </aside>
-
-    <!-- Contenido principal de la página -->
-    <main class="content">
+    <main id="content" class="main-content" role="main">
       {{ content }}
+
+      <footer class="site-footer">
+        {% if site.github.is_project_page %}
+          <span class="site-footer-owner">
+            <a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> es mantenido por 
+            <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.
+          </span>
+        {% endif %}
+      </footer>
     </main>
+
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <h3>Navegación</h3>
+        <ul>
+          <li><a href="{{ '/' | relative_url }}">Inicio</a></li>
+          <li><a href="{{ '/guia' | relative_url }}">Guía</a></li>
+          <li><a href="{{ '/endpoints' | relative_url }}">Endpoints</a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-messages">
+        <h3>Mensajes</h3>
+        <div class="message-box info">
+          <p>Bienvenido a la documentación de la API</p>
+        </div>
+      </div>
+
+      <div class="sidebar-errors">
+        <h3>Errores Comunes</h3>
+        <div class="message-box error">
+          <p>Error 404: Endpoint no encontrado</p>
+        </div>
+        <div class="message-box warning">
+          <p>Error 401: No autorizado</p>
+        </div>
+      </div>
+    </aside>
   </body>
 </html>
