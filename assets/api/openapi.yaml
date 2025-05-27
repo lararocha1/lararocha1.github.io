@@ -1,1 +1,9 @@
+---
+title: "Referencia de API"
+layout: default  # Usa el mismo layout de tus otras páginas para incluir la cabecera/menú
+permalink: /referencia/  # URL deseada para la página
+---
 
+<!-- Contenido HTML dentro de Markdown -->
+<redoc spec-url="{{ '/assets/api/openapi.yaml' | relative_url }}"></redoc>
+<script src="https://cdn.redoc.ly/redoc/latest/bundles/redoc.standalone.js"></script>
