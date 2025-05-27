@@ -5,7 +5,7 @@ title: Inicio
 # lararocha1.github.io
 
 # Bienvenida a mi documentación API 🚀
-
+---
 ¡Hola! Este es el sitio de documentación para mi proyecto.
 
 ## 📘 Secciones disponibles
