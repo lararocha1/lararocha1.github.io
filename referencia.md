@@ -3,6 +3,7 @@ layout: default
 title: Referencia API
 ---
 
+
 # 📚 Referencia Técnica de la API
 
 Esta sección documenta los conceptos clave, estructuras, errores comunes y funciones complementarias como autenticación o webhooks.
