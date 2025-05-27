@@ -49,4 +49,20 @@ main.content {
   margin-left: 260px;
   padding: 24px;
 }
+.admonition {
+  border-left: 5px solid #b88cff;
+  background-color: #1e1e1e;
+  padding: 12px 16px;
+  margin: 16px 0;
+  border-radius: 6px;
+}
+
+.admonition.warning {
+  border-left-color: #ffcc00;
+}
+
+.admonition.danger {
+  border-left-color: #ff4444;
+}
+
 
